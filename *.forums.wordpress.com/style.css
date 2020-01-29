@@ -32,10 +32,10 @@ body,
 }
 
 body,
+.site,
 p,
 ul,
 ol,
-.site,
 .widget .widget-title,
 #footer h4 {
   color: var(--nord4);
@@ -58,7 +58,7 @@ h2 a:visited {
 a.button-primary,
 .button,
 input[type=submit],
-button{
+button {
   background: var(--nord3);
   border: 1px solid var(--nord0);
   color: var(--nord4);
@@ -86,12 +86,13 @@ button{
 .bbp-topics ul.super-sticky,
 .bbp-topics ul.sticky,
 #bbpress-forums.bbp-forum-content ul.sticky {
-  background: var(--nord11) !important;
+  background: var(--nord9) !important;
   color: var(--nord0) !important;
 }
 
-.bbp-topics ul.super-sticky a {
-  background: var(--nord11) !important;
+.bbp-topics ul.super-sticky a,
+.bbp-topics ul.sticky a{
+  background: var(--nord9) !important;
   color: var(--nord0) !important;
 }
 
@@ -136,8 +137,19 @@ div#bbpress-forums .bbp-topics .status-closed a {
   color: var(--nord4);
 }
 
+#front-search input::placeholder {
+  color: var(--nord9);
+}
+
 #bbpress-forums fieldset.bbp-form {
   border: 1px solid var(--nord0);
+}
+
+.topic_tags_delete_tag_form input[type=submit],
+.topic_tags_delete_tag_form input[type=submit]:focus,
+.topic_tags_delete_tag_form input[type=submit]:hover {
+  background: none;
+  color: var(--nord9);
 }
 
 #topic_tags_add_tag_form input[type=text],
@@ -147,6 +159,10 @@ div#bbpress-forums .bbp-topics .status-closed a {
   color: var(--nord4);
   width: 100%;
   display: inline-block;
+}
+
+#topic_tags_add_tag_form input[type=submit] {
+  background: var(--nord3);
 }
 
 #bbpress-forums fieldset.bbp-form input,
@@ -159,8 +175,9 @@ select {
   color: var(--nord4);
 }
 
-.bbp-pagination-links a,
 .bbp-pagination-links a:hover,
+.bbp-pagination-links span.current,
+.bbp-pagination-links a,
 .bbp-pagination-links span.current,
 #bbcode_buttons div {
   background: var(--nord3);
@@ -189,4 +206,41 @@ body.reply-edit .bbp-reply-form code {
   background: none;
   color: var(--nord4);
   opacity: 1;
+}
+
+div.bbp-forum-header,
+div.bbp-topic-header,
+div.bbp-reply-header {
+  border-top: 1px solid var(--nord0);
+}
+
+div.bbp-template-notice,
+div.indicator-hint {
+  background-color: var(--nord11);
+  border-color: var(--nord0);
+  color: var(--nord4);
+}
+
+
+div.bbp-template-notice.important,
+div.bbp-template-notice.important p {
+  background-color: var(--nord9);
+  border-color: var(--nord0);
+  color: var(--nord0);
+}
+
+#staff-notes-loaded li.topic-note {
+  background-color: var(--nord9);
+  border-color: var(--nord0);
+  color: var(--nord0);
+}
+
+li.topic-note h4 {
+  border-bottom: 1px solid var(--nord0);
+}
+
+li.topic-note p,
+li.topic-note p a,
+li.topic-note .note-meta {
+  color: var(--nord0);
 }
