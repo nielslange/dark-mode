@@ -354,17 +354,17 @@ select.user-blog-panel__blog-selector {
 }
 
 .chat__message.chat__message__type-event .chat__message__text {
-  background: var(--nord9);
-  color: var(--nord1);
-  opacity: 0.75;
+  background: var(--nord0);
+  color: var(--nord4);
 }
 
 .chat__message.chat__message__type-note .chat__message__text:after {
   border-bottom: 8px solid var(--nord0);
 }
 
+.chat__message .chat__message__text a, 
 .chat__message.chat__message__type-note .chat__message__text .chat__message__link {
-  color: var(--nord1);
+  color: var(--nord9);
 }
 
 .chat__message .chat__message__text .chat__message__meta {
